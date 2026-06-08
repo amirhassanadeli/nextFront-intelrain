@@ -2,28 +2,29 @@ import Link from 'next/link';
 
 const CTA = () => {
   return (
-    <section className="relative py-32 border-t border-white/5 overflow-hidden">
+    <section className="relative py-32 border-t border-white/5 overflow-hidden bg-black">
 
       {/* background glow */}
       <div className="absolute inset-0 -z-10 flex justify-center items-center">
-        <div className="w-[600px] h-[400px] bg-indigo-600/20 rounded-full blur-[140px]" />
-        <div className="absolute w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[120px]" />
+        <div className="w-[650px] h-[450px] bg-cyan-500/20 rounded-full blur-[160px]" />
+        <div className="absolute w-[350px] h-[350px] bg-purple-500/15 rounded-full blur-[140px]" />
+        <div className="absolute w-[250px] h-[250px] bg-blue-500/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-6 text-center">
 
-        <span className="text-xs tracking-[0.3em] uppercase text-gray-500">
+        <span className="text-xs tracking-[0.35em] uppercase text-gray-500">
           بیایید همکاری کنیم
         </span>
 
-        <h3 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        <h3 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
           بیایید سیستم‌های <br className="hidden md:block" />
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
             هوشمند را با هم بسازیم
           </span>
         </h3>
 
-        <p className="mt-8 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-8 text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
           آماده‌اید کسب‌وکار خود را با هوش مصنوعی متحول کنید؟ بیایید سیستم‌های مقیاس‌پذیر،
           خطوط لوله اتوماسیون و محصولات هوشمند متناسب با رشد شما را طراحی کنیم.
         </p>
@@ -35,9 +36,9 @@ const CTA = () => {
             href="/contact"
             className="
               px-10 py-4 rounded-xl
-              bg-gradient-to-r from-indigo-500 to-purple-600
+              bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600
               text-white font-semibold
-              shadow-lg shadow-indigo-500/20
+              shadow-lg shadow-cyan-500/20
               hover:scale-105 active:scale-95
               transition-all duration-300
               inline-block

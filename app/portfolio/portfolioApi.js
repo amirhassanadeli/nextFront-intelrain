@@ -1,23 +1,12 @@
-// app/portfolio/portfolioApi.js
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+import { fetchAPI } from '../lib/baseApi';
 
 export async function getAllProjects() {
   try {
-    const response = await fetch(
-      `${API_URL}/portfolio/`,
-      {
-        cache: 'no-store',
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch projects');
-    }
-
-    return await response.json();
+    return await fetchAPI('/portfolio/', {
+      cache: 'no-store', // optional
+    });
   } catch (error) {
-    console.error(error);
+    console.error('Failed to fetch projects:', error);
     return [];
   }
 }

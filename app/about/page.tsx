@@ -22,9 +22,9 @@ export default function AboutPage() {
 
     stats: [
       { value: '2024', label: 'تاسیس', icon: '📅' },
-      { value: '۱۵۰+', label: 'پروژه انجام شده', icon: '🚀' },
-      { value: '۵۰+', label: 'متخصص هوش مصنوعی', icon: '👥' },
-      { value: '۹۸٪', label: 'رضایت مشتری', icon: '⭐' },
+      { value: '50+', label: 'پروژه انجام شده', icon: '🚀' },
+      { value: '10+', label: 'متخصص هوش مصنوعی', icon: '👥' },
+      { value: '90٪', label: 'رضایت مشتری', icon: '⭐' },
       { value: '۲۴/۷', label: 'پشتیبانی', icon: '🛡️' },
     ],
 

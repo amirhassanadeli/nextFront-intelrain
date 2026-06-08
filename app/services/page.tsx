@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { fetchAPI } from '../lib/api';
-
+import { fetchAPI } from '../lib/baseApi';
 type Service = {
   hash?: string | number;
   icon?: string;
@@ -21,26 +20,22 @@ export default function Services() {
     subtitle: 'راه‌حل‌های پیشرفته هوش مصنوعی متناسب با نیازهای کسب‌وکار شما',
   };
 
+
+
   useEffect(() => {
     async function loadServices() {
       try {
+        setLoading(true);
+        // ✅ درست - فراخوانی مستقیم تابع
         const result = await fetchAPI('/services/');
-
-        const servicesWithFeatures: Service[] = (result || []).map(
-          (service: Service) => ({
-            ...service,
-            features: service.features || [],
-          })
-        );
-
-        setServices(servicesWithFeatures);
+        setServices(result || []);
+        setError('');
       } catch (err) {
-        setError('خطا در بارگذاری خدمات.');
+        setError('خطا در بارگذاری خدمات');
       } finally {
         setLoading(false);
       }
     }
-
     loadServices();
   }, []);
 

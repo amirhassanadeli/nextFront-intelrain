@@ -36,9 +36,9 @@ export default function PortfolioPage() {
     },
 
     stats: {
-      projects: '۱۵۰+',
-      clients: '۸۵+',
-      satisfaction: '۹۸٪',
+      projects: '50+',
+      clients: '75+',
+      satisfaction: '90٪',
     },
   };
 
